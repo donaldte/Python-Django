@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        {% for product in produits %}
+         <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'images/img10.jpeg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.price }} fcfa</p>
+                    <a href="#" class="btn btn-primary">Add to card</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}
